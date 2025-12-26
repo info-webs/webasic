@@ -1,0 +1,62 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  url?: string;
+  canonical?: string;
+}
+const { title = "ATRA y Obesidad Salamanca - Apoyo y recursos", description = "Información, apoyo a familias y actividades para el bienestar ante Trastornos de la Conducta Alimentaria y obesidad en Salamanca.", image = "/og-image.svg", url = "https://atrayobesidad.com", canonical = url } = Astro.props as Props;
+const org = {
+  name: "ATRA y Obesidad Salamanca",
+  url: "https://atrayobesidad.com",
+  email: "mailto:atrayobesidad@gmail.com",
+  telephone: "+34 622 92 74 74",
+  sameAs: [
+    "https://www.instagram.com/atrayobesidadsa/",
+    "https://www.facebook.com/p/ATRA-Y-Obesidad-100063570494244/"
+  ],
+  address: {
+    streetAddress: "Paseo del Gran Capitán 53, planta 2, despacho 26",
+    addressLocality: "Salamanca",
+    addressCountry: "ES"
+  }
+};
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+
+<!-- Open Graph -->
+<meta property="og:site_name" content={org.name} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={image} />
+<meta property="og:url" content={canonical} />
+<meta property="og:type" content="website" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={image} />
+
+<!-- JSON-LD Organization -->
+<script type="application/ld+json">
+{JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": org.name,
+  "url": org.url,
+  "email": org.email,
+  "telephone": org.telephone,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": org.address.streetAddress,
+    "addressLocality": org.address.addressLocality,
+    "addressCountry": org.address.addressCountry
+  },
+  "sameAs": org.sameAs
+})}
+</script>

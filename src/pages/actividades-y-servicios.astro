@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+<BaseLayout title="Actividades y servicios - ATRA y Obesidad Salamanca" description="Conoce nuestras actividades y servicios: atención a familiares, escuela de padres, yoga y banco de libros." canonical="https://atrayobesidad.com/actividades-y-servicios">
+  <Header slot="header" />
+
+  <section class="max-w-5xl mx-auto px-4 py-12">
+    <h1 class="text-2xl font-bold">Actividades y servicios</h1>
+    <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Inicio","item":"https://atrayobesidad.com"},
+        {"@type":"ListItem","position":2,"name":"Actividades","item":"https://atrayobesidad.com/actividades-y-servicios"}
+      ]
+    })}
+    </script>
+    <p class="mt-4 text-gray-700">Ofrecemos actividades y servicios para apoyar a personas afectadas y a sus familias.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="font-semibold">Atención y seguimiento a familiares</h3>
+        <p class="text-sm text-gray-600 mt-2">Seguimiento telefónico y presencial. Contacto inicial por teléfono o email.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="font-semibold">Escuela de padres</h3>
+        <p class="text-sm text-gray-600 mt-2">Sesiones terapéuticas para familiares. Fecha: 1 martes al mes (consultar disponibilidad).</p>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="font-semibold">Yoga</h3>
+        <p class="text-sm text-gray-600 mt-2">Viernes 17:45 — Yoga suave, restaurativo y respiración consciente. Instructora especializada.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="font-semibold">Banco de libros</h3>
+        <p class="text-sm text-gray-600 mt-2">Acceso gratuito a libros sobre TCA para socios.</p>
+      </div>
+    </div>
+
+    <p class="mt-6 text-gray-700">¿Quieres participar o reservar plaza? <a href="/contacto" class="text-blue-600">Infórmate aquí</a>.</p>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

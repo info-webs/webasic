@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+<BaseLayout title="Accesibilidad" description="Compromiso de accesibilidad y guía breve sobre prácticas implementadas." canonical="https://atrayobesidad.com/accesibilidad">
+  <Header slot="header" />
+  <section class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-2xl font-bold">Accesibilidad</h1>
+    <p class="mt-4 text-gray-700">Nuestro objetivo es cumplir WCAG AA: contraste, navegación con teclado, roles y atributos ARIA, etiquetas en formularios y textos alternativos en imágenes.</p>
+    <p class="mt-4 text-sm text-gray-600">(TODO) Informe de accesibilidad y recorrido de comprobaciones.</p>
+  </section>
+  <Footer slot="footer" />
+</BaseLayout>

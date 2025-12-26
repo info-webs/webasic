@@ -1,0 +1,40 @@
+---
+const FORM_ENDPOINT = "https://formspree.io/f/your-id"; // TODO: replace with real Formspree form id
+---
+<form class="max-w-2xl border rounded p-6 bg-white shadow" method="POST" action={FORM_ENDPOINT}>
+  <input type="hidden" name="_subject" value="Contacto desde web: ATRA y Obesidad" />
+  <!-- NOTE: remove `netlify` attribute by default; for Netlify Forms add `data-netlify="true"` and hidden form-name field -->
+  <label class="block mb-2">
+    <span class="text-sm font-medium">Nombre</span>
+    <input name="name" type="text" required class="mt-1 block w-full border rounded px-3 py-2" />
+  </label>
+  <label class="block mb-2">
+    <span class="text-sm font-medium">Email</span>
+    <input name="email" type="email" required class="mt-1 block w-full border rounded px-3 py-2" />
+  </label>
+  <label class="block mb-2">
+    <span class="text-sm font-medium">Teléfono (opcional)</span>
+    <input name="phone" type="tel" class="mt-1 block w-full border rounded px-3 py-2" />
+  </label>
+  <label class="block mb-2">
+    <span class="text-sm font-medium">Motivo</span>
+    <select name="motivo" required class="mt-1 block w-full border rounded px-3 py-2">
+      <option value="Información">Información</option>
+      <option value="Apoyo familiar">Apoyo familiar</option>
+      <option value="Actividades">Actividades</option>
+      <option value="Hacerse socio">Hacerse socio</option>
+      <option value="Donación">Donación</option>
+      <option value="Otros">Otros</option>
+    </select>
+  </label>
+  <label class="block mb-2">
+    <span class="text-sm font-medium">Mensaje</span>
+    <textarea name="message" rows="4" class="mt-1 block w-full border rounded px-3 py-2" required></textarea>
+  </label>
+  <label class="flex items-start gap-2 text-sm mb-4">
+    <input type="checkbox" name="privacy" required />
+    <span>Acepto la <a class="text-blue-600 underline" href="/politica-privacidad">política de privacidad</a> y autorizo el tratamiento de mis datos para responder a mi solicitud.</span>
+  </label>
+  <button type="submit" class="inline-block bg-blue-600 text-white px-4 py-2 rounded">Enviar</button>
+  <p class="mt-3 text-xs text-gray-500">Si necesitas ayuda ahora, llama al <a href="tel:+34622927474" class="text-blue-600">622 92 74 74</a> o escribe a <a href="mailto:atrayobesidad@gmail.com" class="text-blue-600">atrayobesidad@gmail.com</a>.</p>
+</form>

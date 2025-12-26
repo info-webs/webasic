@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+<BaseLayout title="¿Qué son los Trastornos de la Conducta Alimentaria?" description="Información clara y empática sobre qué son los TCA, señales, impacto y cuándo pedir ayuda." canonical="https://atrayobesidad.com/tca">
+  <Header slot="header" />
+
+  <section class="max-w-5xl mx-auto px-4 py-12">
+    <h1 class="text-2xl font-bold">¿Qué son los Trastornos de la Conducta Alimentaria (TCA)?</h1>
+    <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Inicio","item":"https://atrayobesidad.com"},
+        {"@type":"ListItem","position":2,"name":"TCA","item":"https://atrayobesidad.com/tca"}
+      ]
+    })}
+    </script>
+    <p class="mt-4 text-gray-700">Los TCA son alteraciones significativas en los hábitos alimentarios asociadas a preocupaciones por el peso y el cuerpo. Su origen es multicausal y requieren un abordaje multidisciplinar.</p>
+
+    <h2 class="mt-6 font-semibold">Señales generales</h2>
+    <ul class="list-disc pl-6 text-gray-700 mt-2">
+      <li>Cambios importantes en la relación con la comida</li>
+      <li>Insatisfacción corporal persistente</li>
+      <li>Pensamientos distorsionados sobre peso, cuerpo y comida</li>
+    </ul>
+
+    <h2 class="mt-6 font-semibold">Impacto</h2>
+    <p class="text-gray-700">Los TCA afectan a la salud física y emocional, y también al entorno familiar. Se estima que millones de personas se ven afectadas a nivel mundial.</p>
+
+    <h2 class="mt-6 font-semibold">Cuándo pedir ayuda</h2>
+    <p class="text-gray-700">Si detectas señales preocupantes, busca ayuda profesional y contacta con recursos de apoyo. En caso de riesgo inmediato, acude a servicios de urgencias.</p>
+
+    <h2 class="mt-6 font-semibold">Fuentes y recursos</h2>
+    <p class="text-gray-700">(TODO) Añadir enlaces a recursos oficiales: Ministerio de Sanidad, OMS, asociaciones reconocidas.</p>
+
+    <p class="mt-6 text-xs text-gray-500">Este sitio ofrece información y apoyo, pero no sustituye la atención médica especializada.</p>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

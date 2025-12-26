@@ -1,33 +1,51 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import HeaderPresentation from "../components/presentation/header"
-import FeaturePresentation from "../components/presentation/feature"
-import LogosPresentation from "../components/presentation/logos"
-import DevFreePresentation from "../components/presentation/developerFree"
-import PalettePresentationFree from "../components/presentation/palette"
-import CodePresentation from "../components/presentation/code"
-import FreeToProPresentation from "../components/presentation/freeToPro"
-import AstroPresentation from "../components/presentation/astro"
-import PagesFreePresentation from "../components/presentation/pagesFree"
-import GithubPresentation from "../components/presentation/github"
-import PricingPresentation from "../components/presentation/pricing"
-import FooterFreePresentation from "../components/presentation/footerFree"
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 ---
 
-<Layout title="Presentation Page">
-	<main>
-    <HeaderPresentation client:only="react" />
-    <FeaturePresentation client:only="react" />
-    <LogosPresentation client:only="react" />
-    <DevFreePresentation client:only="react" />
-    <PalettePresentationFree client:only="react" />
-    <CodePresentation client:only="react" />
-    <FreeToProPresentation client:only="react" />
-    <AstroPresentation client:only="react" />
-    <PagesFreePresentation client:only="react" />
-    <PricingPresentation client:only="react" />
-    <GithubPresentation client:only="react" />
-    <FooterFreePresentation client:only="react" />
-  </main>
-</Layout>
+<BaseLayout title="Acompañamiento ante TCA y obesidad en Salamanca" description="Información, apoyo a familias y actividades para el bienestar ante TCA y obesidad en Salamanca." canonical="https://atrayobesidad.com">
+  <Header slot="header" />
+
+  <section class="bg-blue-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h1 class="text-3xl md:text-4xl font-bold text-blue-900">Acompañamiento y orientación ante TCA y obesidad en Salamanca</h1>
+      <p class="mt-4 text-lg text-gray-700">Información, apoyo a familias y actividades para mejorar el bienestar.</p>
+      <div class="mt-6 flex justify-center gap-4">
+        <a href="/contacto" class="bg-blue-600 text-white px-4 py-2 rounded">Contactar</a>
+        <a href="/actividades-y-servicios" class="bg-white border border-blue-600 text-blue-600 px-4 py-2 rounded">Ver actividades</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12">
+    <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded shadow p-6">
+        <h3 class="font-semibold">Atención a familiares</h3>
+        <p class="text-sm text-gray-600 mt-2">Seguimiento telefónico y presencial para acompañar a la familia.</p>
+      </div>
+      <div class="bg-white rounded shadow p-6">
+        <h3 class="font-semibold">Escuela de padres</h3>
+        <p class="text-sm text-gray-600 mt-2">Sesiones terapéuticas mensuales para familiares.</p>
+      </div>
+      <div class="bg-white rounded shadow p-6">
+        <h3 class="font-semibold">Yoga y bienestar</h3>
+        <p class="text-sm text-gray-600 mt-2">Yoga suave y respiración consciente para el autocuidado.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl font-semibold">Cómo ayudamos</h2>
+      <ol class="mt-4 list-decimal pl-6 text-gray-700">
+        <li>Contacta y cuenta tu situación.</li>
+        <li>Orientación y primer seguimiento.</li>
+        <li>Acceso a recursos y actividades de apoyo.</li>
+      </ol>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: https://atrayobesidad.com/sitemap.xml
+
+# TODO: add Disallow rules if necessary for staging or private sections

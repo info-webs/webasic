@@ -1,0 +1,29 @@
+---
+import SEO from "../components/SEO.astro";
+export interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+}
+const { title, description, canonical } = Astro.props as Props;
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <SEO title={title} description={description} canonical={canonical} />
+    <link rel="icon" href="/favicon.png" />
+  </head>
+  <body class="antialiased text-gray-800 bg-white">
+    <a class="sr-only focus:not-sr-only focusable" href="#content">Saltar al contenido</a>
+    <style>
+      .focusable:focus{position:static;clip:auto;width:auto;height:auto;margin:0;overflow:visible}
+    </style>
+    <slot name="header" />
+    <main id="content" class="min-h-screen">
+      <slot />
+    </main>
+    <slot name="footer" />
+  </body>
+</html>

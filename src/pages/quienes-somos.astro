@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+<BaseLayout title="Quiénes somos - ATRA y Obesidad Salamanca" description="Conoce la historia, misión y valores de ATRA y Obesidad Salamanca." canonical="https://atrayobesidad.com/quienes-somos">
+  <Header slot="header" />
+
+  <section class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-2xl font-bold">Quiénes somos</h1>
+    <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Inicio","item":"https://atrayobesidad.com"},
+        {"@type":"ListItem","position":2,"name":"Quiénes somos","item":"https://atrayobesidad.com/quienes-somos"}
+      ]
+    })}
+    </script>
+    <p class="mt-4 text-gray-700">ATRA y Obesidad Salamanca es una asociación sin ánimo de lucro creada en septiembre de 2019 por familiares comprometidos con la formación, prevención y sensibilización sobre Trastornos de la Conducta Alimentaria (TCA) y obesidad.</p>
+
+    <h2 class="mt-6 font-semibold">Misión</h2>
+    <p class="text-gray-700">Promover el bienestar y la calidad de vida de las personas afectadas y sus familias mediante información, orientación y apoyo.</p>
+
+    <h2 class="mt-6 font-semibold">Visión</h2>
+    <p class="text-gray-700">Ser un recurso de referencia local que facilite acceso a información y recursos a largo plazo.</p>
+
+    <h2 class="mt-6 font-semibold">Valores</h2>
+    <ul class="list-disc pl-6 mt-2 text-gray-700">
+      <li>Compromiso</li>
+      <li>Trabajo en equipo</li>
+      <li>Colaboración</li>
+    </ul>
+
+    <h2 class="mt-6 font-semibold">Transparencia y colaboración</h2>
+    <p class="text-gray-700">Si quieres colaborar o donar, <a href="/contacto" class="text-blue-600">consúltanos</a> para facilitar los pasos. (TODO: información de donaciones y CIF)</p>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

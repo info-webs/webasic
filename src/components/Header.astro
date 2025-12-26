@@ -1,0 +1,29 @@
+---
+import { NAV } from "../data/navigation";
+const nav = NAV as any[];
+---
+<nav class="bg-white border-b" role="navigation" aria-label="Principal">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+    <a class="flex items-center gap-3" href="/" aria-label="ATRA y Obesidad Salamanca">
+      <img src="/logo-mark.svg" alt="Logo ATRA" class="h-10 w-auto" />
+      <span class="font-semibold text-gray-900">ATRA y Obesidad</span>
+    </a>
+
+    <div class="hidden md:flex items-center gap-6">
+      {nav.map((item: any) => (
+        <a class="text-gray-700 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded" href={item.href}>{item.label}</a>
+      ))}
+    </div>
+
+    <div class="md:hidden">
+      <details class="relative">
+        <summary class="cursor-pointer px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">Menu</summary>
+        <div class="absolute right-0 mt-2 w-48 bg-white border rounded shadow-md z-10 py-2">
+          {nav.map((item: any) => (
+            <a class="block px-4 py-2 text-sm text-gray-700" href={item.href}>{item.label}</a>
+          ))}
+        </div>
+      </details>
+    </div>
+  </div>
+</nav>
